@@ -7,6 +7,11 @@ import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
 import { FormComponent } from './form/form.component';
 
+import { registerLocaleData } from "@angular/common";
+import localeRu from "@angular/common/locales/ru";
+
+registerLocaleData(localeRu);
+
 @NgModule({
   declarations: [
     AppComponent,
