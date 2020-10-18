@@ -6,7 +6,9 @@
   <hr />
   <div *ngIf="toggle; else noCards">
    <app-card
-      *ngFor="let cardItem of cards"
+      *ngFor="let cardItem of cards;  let idx = index"
+      [card]="cardItem"
+      [index]="idx + 1"
    ></app-card>
   </div>
 

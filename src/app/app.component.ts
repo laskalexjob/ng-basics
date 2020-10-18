@@ -17,7 +17,10 @@ export class AppComponent {
   cards: Card[] = [
     {title: 'Card 1', text: 'First card text'},
     {title: 'Card number two', text: 'Second card text'},
-    {title: 'Last card', text: 'Third card text'}
+    {title: 'Last card', text: 'Third card text'},
+    {title: 'Last card', text: 'Third card text'},
+    {title: 'Last card', text: 'Third card text'},
+    {title: 'Last card', text: 'Third card text'},
   ]
 
   toggleCards(){

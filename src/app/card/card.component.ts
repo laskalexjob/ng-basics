@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Card } from '../app.component';
 
 @Component({
   selector: 'app-card',
@@ -7,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
   
+  @Input() card: Card;
+  @Input() index: number;
+
   textColor = 'black';
   title: string = 'Card title!';
   text: string = 'My text!';
@@ -17,12 +21,12 @@ export class CardComponent implements OnInit {
   }
 
   inputHandler(value){
-    this.title = value;
+    this.card.title = value;
     console.log(value);
   }
 
   changeTitleHandler(){
-    this.title = 'Changed title';
+    this.card.title = 'Changed title';
   }
 
   ngOnInit(): void {

@@ -1,11 +1,11 @@
 <div class="card">
   <h2
     [ngStyle]="{
-      color: title.length > 6 ? 'red' : 'blue',
-      fontWeight: title.length < 4 ? 'bold' : 'normal'
+      color: card.title.length > 6 ? 'red' : 'blue',
+      fontWeight: card.title.length < 4 ? 'bold' : 'normal'
     }"
   >
-    {{ title }}
+   {{index}} {{ card.title }}
   </h2>
 
   <p class="text"
@@ -14,12 +14,12 @@
       green: textColor === 'green',
       red: textColor === 'red'
     }">
-    {{ text }}
+    {{ card.text }}
   </p>
 
   <div class="buttons">
     <button (click)="changeTitleHandler()">Change title</button>
-    <button (click)="title = 'Changed inline title'">
+    <button (click)="card.title = 'Changed inline title'">
       Inline button change
     </button>
   </div>
@@ -32,6 +32,6 @@
     <input type="text" #myInput (input)="inputHandler(myInput.value)" [value]="title" >
   </div> -->
   <div>
-    <input type="text" [(ngModel)]="title" />
+    <input type="text" [(ngModel)]="card.title" />
   </div>
 </div>
