@@ -5,9 +5,9 @@
   <button (click)="toggleCards()">Toggle Cards</button>
   <hr />
   <div *ngIf="toggle; else noCards">
-    <app-card></app-card>
-    <app-card></app-card>
-    <app-card></app-card>
+   <app-card
+      *ngFor="let cardItem of cards"
+   ></app-card>
   </div>
 
   <ng-template #noCards>
