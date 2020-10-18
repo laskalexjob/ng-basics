@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ng-basics';
+
+  toggle = true;
+
+  toggleCards(){
+    this.toggle = !this.toggle;
+  }
+
 }
