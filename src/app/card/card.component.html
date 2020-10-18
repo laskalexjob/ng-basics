@@ -5,15 +5,17 @@
       fontWeight: card.title.length < 4 ? 'bold' : 'normal'
     }"
   >
-   {{index}} {{ card.title }}
+    {{ index }} {{ card.title }}
   </h2>
 
-  <p class="text"
+  <p
+    class="text"
     [ngClass]="{
       blue: textColor === 'blue',
       green: textColor === 'green',
       red: textColor === 'red'
-    }">
+    }"
+  >
     {{ card.text }}
   </p>
 
@@ -27,6 +29,11 @@
     <button (click)="textColor = 'blue'">Set blue</button>
     <button (click)="textColor = 'green'">Set green</button>
     <button (click)="textColor = 'red'">Set red</button>
+  </div>
+  <div>
+    <strong>
+      {{cardDate | date: 'dd.MM.yyyy HH:mm:ss'}}
+    </strong>
   </div>
   <!-- <div>
     <input type="text" #myInput (input)="inputHandler(myInput.value)" [value]="title" >

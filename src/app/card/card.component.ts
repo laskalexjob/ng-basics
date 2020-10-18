@@ -11,10 +11,12 @@ export class CardComponent implements OnInit {
   @Input() card: Card;
   @Input() index: number;
 
-  textColor = 'black';
+  textColor = 'blue';
   title: string = 'Card title!';
   text: string = 'My text!';
   disabled = false;
+
+  cardDate: Date = new Date();
 
   getInfo(): string {
     return 'This is some info';
