@@ -10,7 +10,7 @@ import { FormComponent } from './form/form.component';
 import { registerLocaleData } from "@angular/common";
 import localeRu from "@angular/common/locales/ru";
 
-registerLocaleData(localeRu);
+registerLocaleData(localeRu, 'ru');
 
 @NgModule({
   declarations: [
