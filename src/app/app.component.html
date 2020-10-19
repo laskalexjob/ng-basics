@@ -2,7 +2,17 @@
   <h2>Hello Angular World</h2>
 
   <p>{{ title }}</p>
-  <img [src]="imgReact" alt="" width="100" height="100">
+  <img [src]="imgReact" alt="" width="100" height="100" />
+
+  <input type="text" (keyup.enter)="onInput($event)"
+  (blur)="onBlur(myInput.value)" #myInput/>
+  <p>
+    <strong>{{ inputVal }}</strong>
+  </p>
+
+  <p>Two way</p>
+  <input type="text" [(ngModel)]="myInput.value">
+
   <hr />
   <app-post></app-post>
   <app-post></app-post>

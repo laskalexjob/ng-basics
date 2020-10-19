@@ -12,10 +12,19 @@ export class AppComponent {
   imgReact = this.imgDefault;
   imgAngular =
     'https://cdn.freebiesupply.com/logos/large/2x/angular-icon-1-logo-png-transparent.png';
-
+  inputVal = ''
   constructor() {
     setTimeout(() => {
       this.imgReact = this.imgAngular
     }, 3000);
+  }
+
+  onBlur(str){
+    this.inputVal = str;
+  }
+
+  onInput(event){
+    console.log('Event', event)
+    this.inputVal = event.target.value
   }
 }
