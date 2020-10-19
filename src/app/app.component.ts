@@ -15,7 +15,7 @@ export class AppComponent {
 
   constructor() {
     setTimeout(() => {
-      this.imgReact = this.imgDefault;
+      this.imgReact = this.imgAngular
     }, 3000);
   }
 }
