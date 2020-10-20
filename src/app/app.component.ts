@@ -13,7 +13,7 @@ export class AppComponent {
   imgAngular =
     'https://cdn.freebiesupply.com/logos/large/2x/angular-icon-1-logo-png-transparent.png';
   inputVal = '';
-  toggleSwitcher: boolean = false;
+  toggleSwitcher: boolean = true;
 
   toggleSwith() {
     this.toggleSwitcher = !this.toggleSwitcher;
