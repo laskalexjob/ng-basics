@@ -1,20 +1,5 @@
 <h2>Hello Angular World</h2>
 
-<!-- <ul>
-  <li *ngFor="let item of arr; let idx = index">
-    <strong>{{ idx }} {{ item }}</strong>
-  </li>
-</ul> -->
-
-<ul>
-  <li *ngFor="let post of objs">
-    <p>{{ post.title }}</p>
-    <p>{{ post.author }}</p>
-    <ul *ngFor="let item of post.comments">
-      <li>
-        {{ item.name }}
-        <p>{{ item.text }}</p>
-      </li>
-    </ul>
-  </li>
-</ul>
+<p>
+  {{ date | date: "small" }}
+</p>
