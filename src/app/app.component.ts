@@ -6,9 +6,26 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  toggleSwitcher: any = true;
+  arr: number[] = [1, 2, 3, 4, 5, 6, 7];
 
-  toggleSwith() {
-    this.toggleSwitcher = !this.toggleSwitcher;
-  }
+  objs = [
+    {
+      title: 'Post1',
+      author: 'Alex',
+      comments: [
+        { name: 'post1', text: 'some' },
+        { name: 'post1', text: 'some' },
+        { name: 'post1', text: 'some' },
+      ],
+    },
+    {
+      title: 'Post2',
+      author: 'Alex 2',
+      comments: [
+        { name: 'post2', text: 'some 2' },
+        { name: 'post2', text: 'some 2' },
+        { name: 'post2', text: 'some 2' },
+      ],
+    },
+  ];
 }

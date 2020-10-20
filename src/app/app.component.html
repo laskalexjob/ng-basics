@@ -1,14 +1,20 @@
-<div class="container">
-  <h2>Hello Angular World</h2>
+<h2>Hello Angular World</h2>
 
-  <button (click)="toggleSwitcher = !toggleSwitcher">Switch</button>
-  <button (click)="toggleSwitcher = 123">Make default</button>
+<!-- <ul>
+  <li *ngFor="let item of arr; let idx = index">
+    <strong>{{ idx }} {{ item }}</strong>
+  </li>
+</ul> -->
 
-  <div [ngSwitch]="toggleSwitcher">
-    <p *ngSwitchCase="true" class="blue">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, unde!
-    </p>
-    <p *ngSwitchCase="false" class="red">Lorem, ipsum.</p>
-    <p *ngSwitchDefault>Default value</p>
-  </div>
-</div>
+<ul>
+  <li *ngFor="let post of objs">
+    <p>{{ post.title }}</p>
+    <p>{{ post.author }}</p>
+    <ul *ngFor="let item of post.comments">
+      <li>
+        {{ item.name }}
+        <p>{{ item.text }}</p>
+      </li>
+    </ul>
+  </li>
+</ul>
