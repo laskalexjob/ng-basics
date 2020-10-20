@@ -4,16 +4,31 @@
   <p>{{ title }}</p>
   <img [src]="imgReact" alt="" width="100" height="100" />
 
-  <input type="text" (keyup.enter)="onInput($event)"
-  (blur)="onBlur(myInput.value)" #myInput/>
+  <input
+    type="text"
+    (keyup.enter)="onInput($event)"
+    (blur)="onBlur(myInput.value)"
+    #myInput
+  />
   <p>
     <strong>{{ inputVal }}</strong>
   </p>
 
   <p>Two way</p>
-  <input type="text" [(ngModel)]="myInput.value">
+  <input type="text" [(ngModel)]="myInput.value" />
 
   <hr />
-  <app-post></app-post>
-  <app-post></app-post>
+  <button (click)="toggleSwith()">Switch</button>
+  <p
+    [ngClass]="{
+      red: toggleSwitcher,
+      blue: !toggleSwitcher
+    }"
+  >
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, explicabo!
+  </p>
+
+  <p [class.red]="toggleSwitcher" [class.blue]="!toggleSwitcher">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id, eaque.
+  </p>
 </div>

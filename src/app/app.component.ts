@@ -12,19 +12,24 @@ export class AppComponent {
   imgReact = this.imgDefault;
   imgAngular =
     'https://cdn.freebiesupply.com/logos/large/2x/angular-icon-1-logo-png-transparent.png';
-  inputVal = ''
+  inputVal = '';
+  toggleSwitcher: boolean = false;
+
+  toggleSwith() {
+    this.toggleSwitcher = !this.toggleSwitcher;
+  }
   constructor() {
     setTimeout(() => {
-      this.imgReact = this.imgAngular
+      this.imgReact = this.imgAngular;
     }, 3000);
   }
 
-  onBlur(str){
+  onBlur(str) {
     this.inputVal = str;
   }
 
-  onInput(event){
-    console.log('Event', event)
-    this.inputVal = event.target.value
+  onInput(event) {
+    console.log('Event', event);
+    this.inputVal = event.target.value;
   }
 }
