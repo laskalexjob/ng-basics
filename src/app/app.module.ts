@@ -1,27 +1,21 @@
-import { PostComponent } from './post/post.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-import { registerLocaleData } from "@angular/common";
-import localeRu from "@angular/common/locales/ru";
+import { registerLocaleData } from '@angular/common';
+
+import localeRu from '@angular/common/locales/ru';
+import { PostFormComponent } from './post-form/post-form.component';
+import { PostComponent } from './post/post.component';
 
 registerLocaleData(localeRu, 'ru');
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    PostComponent
-  ],
-  imports: [
-    BrowserModule,
-    CommonModule,
-    FormsModule
-  ],
+  declarations: [AppComponent, PostFormComponent, PostComponent],
+  imports: [BrowserModule, FormsModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
