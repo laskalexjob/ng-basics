@@ -4,5 +4,14 @@
 
   <hr />
 
-  <app-post *ngFor="let item of posts" [post]="item"></app-post>
+  <app-post *ngFor="let item of posts" [post]="item">
+    <small *ngIf="item.text.length > 10; else short">
+      Post is long!
+    </small>
+    <ng-template #short>
+      <small>
+        Post is short(((
+      </small>
+    </ng-template>
+  </app-post>
 </div>
