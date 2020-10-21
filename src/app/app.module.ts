@@ -3,12 +3,12 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { PostComponent } from './post/post.component';
+import { PostFormComponent } from './post-form/post-form.component';
 
 import { registerLocaleData } from '@angular/common';
 
 import localeRu from '@angular/common/locales/ru';
-import { PostFormComponent } from './post-form/post-form.component';
-import { PostComponent } from './post/post.component';
 
 registerLocaleData(localeRu, 'ru');
 

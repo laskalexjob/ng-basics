@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input } from '@angular/core';
 
 export interface Post {
   title: string;
@@ -24,4 +24,9 @@ export class AppComponent {
       id: 2,
     },
   ];
+
+  updatePosts(post: Post) {
+    this.posts.unshift(post);
+    console.log('Post', post);
+  }
 }
