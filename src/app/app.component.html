@@ -4,7 +4,7 @@
 
   <hr />
 
-  <app-post *ngFor="let item of posts" [post]="item">
+  <app-post *ngFor="let item of posts" [post]="item" (onRemove)="removePost($event)">
     <div #info>
       <small *ngIf="item.text.length > 10; else short">
         Post is long!

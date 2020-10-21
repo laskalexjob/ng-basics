@@ -16,7 +16,7 @@ export class AppComponent {
     {
       title: 'I want to learn angular components',
       text: "I'm still learning",
-      id: 1,
+      id: 1
     },
     {
       title: 'I also want to learn Core',
@@ -24,6 +24,11 @@ export class AppComponent {
       id: 2,
     },
   ];
+
+  removePost(id: number) {
+    console.log('id to remove: ', id);
+    this.posts = this.posts.filter(p => p.id !== id)
+  }
 
   updatePosts(post: Post) {
     this.posts.unshift(post);
