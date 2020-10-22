@@ -5,13 +5,11 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import { StyleDirective } from './directives/style.directive';
-import { Style3Directive } from './directives/style3.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StyleDirective,
-    Style3Directive
+    StyleDirective
   ],
   imports: [
     BrowserModule,
