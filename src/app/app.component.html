@@ -1,19 +1,6 @@
 <div class="container">
-  <h1>Angular Components</h1>
-  <app-post-form (onAdd)="updatePosts($event)"></app-post-form>
+  <h1>Angular Directives</h1>
 
-  <hr />
 
-  <app-post *ngFor="let item of posts" [post]="item" (onRemove)="removePost($event)">
-    <div #info>
-      <small *ngIf="item.text.length > 10; else short">
-        Post is long!
-      </small>
-      <ng-template #short>
-        <small>
-          Post is short(((
-        </small>
-      </ng-template>
-    </div>
-  </app-post>
+  <p appStyle>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, cumque.</p>
 </div>
