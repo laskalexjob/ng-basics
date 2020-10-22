@@ -1,11 +1,17 @@
 <div class="container">
-  <h1>Angular Directives</h1>
+  <h1>Angular Pipes</h1>
 
 
-  <p [appStyle]="'red'" [dStyles]="{border: '1px solid blue', borderRadius: '5px'}">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, cumque.
+  <p>
+    {{ 10 | mult }}
   </p>
-  <p [appStyle]="'blue'" [dStyles]="{border: '1px solid red', borderRadius: '15px'}">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, cumque.
+  <p>
+    {{ 10 | mult:2 }}
+  </p>
+  <p>
+    {{ 10 | mult:3 }}
+  </p>
+  <p>
+    {{ 10 | mult:5 }}
   </p>
 </div>

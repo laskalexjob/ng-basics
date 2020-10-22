@@ -1,3 +1,4 @@
+import { MultByPipe } from './pipes/mult-by.pipe';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -9,7 +10,8 @@ import { StyleDirective } from './directives/style.directive';
 @NgModule({
   declarations: [
     AppComponent,
-    StyleDirective
+    StyleDirective,
+    MultByPipe
   ],
   imports: [
     BrowserModule,
