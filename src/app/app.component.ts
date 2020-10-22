@@ -22,4 +22,11 @@ export class AppComponent {
     { title: 'Klim', text: 'asdfasdfasdfsd' },
   ]
 
+  addPost() {
+    this.posts.unshift({
+      title: 'New post',
+      text: 'Vladilen prosto norm poka'
+    })
+  }
+
 }

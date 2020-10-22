@@ -4,6 +4,10 @@
   <button class="btn" (click)="searchField = 'title'">Search by title</button>
   <button class="btn" (click)="searchField = 'text'">Searhc by text</button>
 
+  <hr>
+
+  <button class="btn" (click)="addPost()">Add new Post</button>
+
   <input type="text" [(ngModel)]="search">
 
   <div *ngFor="let post of posts | filter:search:searchField" class="card">
