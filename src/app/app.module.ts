@@ -6,12 +6,16 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import { StyleDirective } from './directives/style.directive';
+import { ExMarksPipe } from './pipes/ex-marks.pipe';
+import { FilterPipe } from './pipes/filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     StyleDirective,
-    MultByPipe
+    MultByPipe,
+    ExMarksPipe,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

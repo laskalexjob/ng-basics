@@ -1,6 +1,17 @@
 <div class="container">
   <h1>Angular Pipes</h1>
 
+  <button class="btn" (click)="searchField = 'title'">Search by title</button>
+  <button class="btn" (click)="searchField = 'text'">Searhc by text</button>
+
+  <input type="text" [(ngModel)]="search">
+
+  <div *ngFor="let post of posts | filter:search:searchField" class="card">
+    <h2>{{post.title}}</h2>
+    <p>{{post.text}}</p>
+  </div>
+
+
 
   <p>
     {{ 10 | mult }}
@@ -14,4 +25,5 @@
   <p>
     {{ 10 | mult:5 }}
   </p>
+  <p>{{'this is just string' | exMarks}}</p>
 </div>
