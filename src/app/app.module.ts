@@ -1,27 +1,19 @@
-import { MultByPipe } from './pipes/mult-by.pipe';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-
-import { StyleDirective } from './directives/style.directive';
-import { ExMarksPipe } from './pipes/ex-marks.pipe';
-import { FilterPipe } from './pipes/filter.pipe';
+import { AppCounterService } from './services/app-counter.service';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    StyleDirective,
-    MultByPipe,
-    ExMarksPipe,
-    FilterPipe
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [AppCounterService],
   bootstrap: [AppComponent],
 })
 export class AppModule {

@@ -1,7 +1,8 @@
 <div class="container">
-  <h1>Angular Pipes</h1>
-
-  <p>Wait for it... {{ p | async }}</p>
-  <p>{{ obs$ | async |  date:'HH:mm:ss' }}</p>
-  <p>{{date | date:'hh:mm:ss'}}</p>
+  <h1>Angular Services</h1>
+  <div class="card">
+    <h2>App Counter: {{ appCounterService.counter }}</h2>
+    <button class="btn" (click)="appCounterService.increment()"> + </button>
+    <button class="btn" (click)="appCounterService.decrement()"> - </button>
+  </div>
 </div>
