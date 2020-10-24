@@ -15,6 +15,9 @@
         <small *ngIf="form.get('email').errors.restrictedEmail">
           {{form.get('email').value}} is restricted!!!
         </small>
+        <small *ngIf="form.get('email').errors.uniqueEmail">
+          {{form.get('email').value}} already exists!!!
+        </small>
       </div>
     </div>
 
@@ -67,7 +70,7 @@
       </div>
     </div>
 
-    <button class="btn" type="submit" [disabled]="form.invalid">Отправить</button>
+    <button class="btn" type="submit" [disabled]="form.invalid || form.pending">Отправить</button>
 
   </form>
 </div>
