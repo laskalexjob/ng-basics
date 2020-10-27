@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   todoTitle = ''
   loading = false
   todos: Todo[] = []
+  error: string = ''
 
   constructor(private todosService: TodosService) { }
 
@@ -45,6 +46,9 @@ export class AppComponent implements OnInit {
         console.log('Response', todos)
         this.todos = todos
         this.loading = false
+      }, err => {
+        console.log('Error', err)
+        this.error = err.message
       })
   }
 
