@@ -13,8 +13,8 @@
       <a [routerLink]="['/about']">About</a>
     </li>
 
-    <li><button class="btn">Login</button></li>
-    <li><button class="btn">Logout</button></li>
+    <li><button class="btn" (click)="appAuth.login()">Login</button></li>
+    <li><button class="btn" (click)="appAuth.logout()">Logout</button></li>
   </ul>
 </nav>
 
