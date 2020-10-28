@@ -1,3 +1,4 @@
+import { ErrorPageComponent } from './error-page/error-page.component';
 import { AboutExtraComponent } from './about-extra/about-extra.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
@@ -10,6 +11,7 @@ import { PostComponent } from './post/post.component';
 // http://localhost:4200/posts -> PostsComponent
 // http://localhost:4200/about -> AboutComponent
 // http://localhost:4200/posts/extra -> AboutComponent
+// http://localhost:4200/error -> ErrorPageComponent
 const routes: Routes = [
     { path: '', component: HomeComponent },
     {
@@ -18,7 +20,9 @@ const routes: Routes = [
         ]
     },
     { path: 'posts', component: PostsComponent },
-    { path: 'posts/:id', component: PostComponent }
+    { path: 'posts/:id', component: PostComponent },
+    { path: 'error', component: ErrorPageComponent },
+    { path: '**', redirectTo: '/error' },
 ]
 
 @NgModule({
