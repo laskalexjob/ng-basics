@@ -1,40 +1,18 @@
-import { PostResolver } from './post.resolver';
-import { AuthGuard } from './auth.guard';
-import { ErrorPageComponent } from './error-page/error-page.component';
-import { AboutExtraComponent } from './about-extra/about-extra.component';
-import { HomeComponent } from './home/home.component';
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { PostsComponent } from './posts/posts.component';
-import { AboutComponent } from './about/about.component';
-import { PostComponent } from './post/post.component';
-
-// http://localhost:4200/ -> HomeComponent
-// http://localhost:4200/posts -> PostsComponent
-// http://localhost:4200/about -> AboutComponent
-// http://localhost:4200/posts/extra -> AboutComponent
-// http://localhost:4200/error -> ErrorPageComponent
-const routes: Routes = [
-    { path: '', component: HomeComponent },
-    {
-        path: 'about', component: AboutComponent, canActivateChild: [AuthGuard], children: [
-            { path: 'extra', component: AboutExtraComponent }
-        ]
-    },
-    { path: 'posts', component: PostsComponent, canActivate: [AuthGuard] },
-    {
-        path: 'posts/:id',
-        component: PostComponent,
-        resolve: {
-            post: PostResolver
-        }
-    },
-    { path: 'error', component: ErrorPageComponent },
-    { path: '**', redirectTo: '/error' },
-]
+import {NgModule} from '@angular/core'
+import {RouterModule} from '@angular/router'
+import {HomePageComponent} from './home-page/home-page.component'
+import {AboutPageComponent} from './about-page/about-page.component'
+import {AboutExtraPageComponent} from './about-page/about-extra-page/about-extra-page.component'
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+  imports: [RouterModule.forRoot([
+    {path: 'about', component: AboutPageComponent, children: [
+      {path: 'extra', component: AboutExtraPageComponent}
+    ]},
+    {path: '', component: HomePageComponent, pathMatch: 'full'}
+  ])],
+  exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+
+}
